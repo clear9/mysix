@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cn.mysix.dao.TestSixDao">
+    <resultMap type="com.cn.mysix.bean.SysUser" id="SysUser">
+        <id column="count" property="count" jdbcType="INTEGER"/>
+        <result column="user" property="user" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="fno" property="fno" jdbcType="INTEGER"/>
+        <result column="userdd" property="userdd" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="SysUser">
+        select * from test.sysuser
+         
+        <where>
+            <if test="countid != null and countid != ''">
+                and count = #{countid,jdbcType=INTEGER}
+            </if>
+        </where>
+
+    </select>
+
+    <insert id="insert" parameterType="com.cn.mysix.bean.SysUser">
+
+        insert into test.sysuser (user,password,name,fno,userdd) values(#{user,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},
+        #{name,jdbcType=VARCHAR},#{fno,jdbcType=INTEGER},#{userdd,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="update" parameterType="com.cn.mysix.bean.SysUser">
+
+        update test.sysuser
+        <set>
+            <if test="password !=null and password != ''">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+
+            <if test="name !=null and name != ''">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+
+            <if test="userdd !=null and userdd != ''">
+                userdd = #{userdd,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where count = #{count,jdbcType=INTEGER}
+
+        <if test="user != null and user != ''">
+            and user = #{user,jdbcType=VARCHAR}
+        </if>
+
+    </update>
+
+    <delete id="delete" parameterType="com.cn.mysix.bean.SysUser">
+
+        delete from test.sysuser where count = #{countid,jdbcType=INTEGER}
+    </delete>
+
+
+</mapper>
