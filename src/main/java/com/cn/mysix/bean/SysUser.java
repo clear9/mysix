@@ -4,6 +4,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * @ClassName SysUser
  * @Description SysUser
@@ -18,7 +20,7 @@ import lombok.*;
 @Data    /*该注解相当于同时加上以下注解@Setter @Getter,@ToString,@EqualsAndHashCode*/
 @AllArgsConstructor     /*全参构造*/
 @NoArgsConstructor      /*无参构造*/
-public class SysUser {
+public class SysUser implements Serializable {
 
 
 

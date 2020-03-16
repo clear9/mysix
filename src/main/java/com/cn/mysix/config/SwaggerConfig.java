@@ -29,7 +29,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.cn.mysix.index"))
+                .apis(RequestHandlerSelectors.basePackage("com.cn.mysix"))
                 .paths(PathSelectors.any())
                 .build();
     }

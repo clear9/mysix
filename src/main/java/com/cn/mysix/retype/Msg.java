@@ -27,4 +27,8 @@ public class Msg {
         this.msgcode = msgcode;
         this.msgcontent = msgcontent;
     }
+
+    public Msg() {
+    }
+
 }
