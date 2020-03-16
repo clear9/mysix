@@ -4,10 +4,23 @@ mybatis:
 
 
 
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    username: root
-    password: root
-    #虚拟host 可以不设置,使用server默认host
-    virtual-host: JCcccHost
+#  rabbitmq:
+#    host: 127.0.0.1
+#    port: 5672
+#    username: root
+#    password: root
+#    #虚拟host 可以不设置,使用server默认host
+#    virtual-host: JCcccHost
+spring:
+  boot:
+    admin:
+      client:
+        url: 'http://localhost:8888'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
