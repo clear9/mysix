@@ -11,16 +11,18 @@ mybatis:
 #    password: root
 #    #虚拟host 可以不设置,使用server默认host
 #    virtual-host: JCcccHost
-spring:
-  boot:
-    admin:
-      client:
-        url: 'http://localhost:8888'
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
+
+
+#spring:
+#  boot:
+#    admin:
+#      client:
+#        url: 'http://localhost:8888'
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      show-details: always
