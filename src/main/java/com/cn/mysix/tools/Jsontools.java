@@ -27,4 +27,9 @@ public class Jsontools {
         return new Msg();
     }
 
+    public String abc(){
+
+        return "new Msg();";
+    }
+
 }
