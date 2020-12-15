@@ -28,5 +28,11 @@ public class Jsontools {
         logger.info("json");
         return new Msg();
     }
+//    @GetMapping("asd")
+//    public Msg asd(){
+//
+//        logger.info("json");
+//        return new Msg();
+//    }
 
 }
