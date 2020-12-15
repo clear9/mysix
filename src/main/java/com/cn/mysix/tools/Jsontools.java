@@ -21,12 +21,11 @@ public class Jsontools {
     Logger logger= LoggerFactory.getLogger(getClass());
 
 
-    @GetMapping("asd")
-    public Msg asd(){
-
-//        String ss= JSONObject.parseObject(hdDevice.getFotherdata()).getString("fposition");
-        logger.info("json");
-        return new Msg();
-    }
+//    @GetMapping("asd")
+//    public Msg asd(){
+//
+//        logger.info("json");
+//        return new Msg();
+//    }
 
 }
