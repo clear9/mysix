@@ -29,7 +29,7 @@ public class Jsontools {
         return new Msg();
     }
 
-    public String abc(){
+    public String as(){
 
         return "new Msg();";
     }
