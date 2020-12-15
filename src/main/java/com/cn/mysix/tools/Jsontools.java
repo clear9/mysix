@@ -1,8 +1,7 @@
 package com.cn.mysix.tools;
 
 import com.cn.mysix.retype.Msg;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,22 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @Version 1.0
  */
 
+@Slf4j
 @RestController
 public class Jsontools {
 
-    Logger logger= LoggerFactory.getLogger(getClass());
 
 
     @GetMapping("asd")
     public Msg ad(){
 
-        System.out.println("");
+        log.info("");
         return new Msg();
     }
-
-    public String as(){
-
-        return "new Msg();";
-    }
-
 }
