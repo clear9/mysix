@@ -22,9 +22,13 @@ public class Jsontools {
 
 
     @GetMapping("asd")
-    public Msg asd(String as){
+    public Msg asd(){
+
 
         logger.info("json");
+
+//        logger.info("json");
+
         return new Msg();
     }
 
