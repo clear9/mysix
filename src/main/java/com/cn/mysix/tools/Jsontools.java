@@ -22,7 +22,7 @@ public class Jsontools {
 
 
     @GetMapping("asd")
-    public Msg asd(){
+    public Msg asd(String as){
 
 //        String ss= JSONObject.parseObject(hdDevice.getFotherdata()).getString("fposition");
         logger.info("json");
