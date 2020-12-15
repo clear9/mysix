@@ -1,5 +1,6 @@
 package com.cn.mysix.tools;
 
+import com.alibaba.druid.support.json.JSONUtils;
 import com.cn.mysix.retype.Msg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,11 +22,11 @@ public class Jsontools {
     Logger logger= LoggerFactory.getLogger(getClass());
 
 
-//    @GetMapping("asd")
-//    public Msg asd(){
-//
+    @GetMapping("asd")
+    public Msg asd(){
+
 //        logger.info("json");
-//        return new Msg();
-//    }
+        return new Msg();
+    }
 
 }
