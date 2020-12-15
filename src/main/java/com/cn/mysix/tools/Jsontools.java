@@ -1,6 +1,5 @@
 package com.cn.mysix.tools;
 
-import com.alibaba.druid.support.json.JSONUtils;
 import com.cn.mysix.retype.Msg;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
