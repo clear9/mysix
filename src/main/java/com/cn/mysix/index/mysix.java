@@ -9,28 +9,28 @@ package com.cn.mysix.index;
  */
 
 
-import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.cn.mysix.bean.SysUser;
 import com.cn.mysix.config.MessagerType;
+import com.cn.mysix.config.timed_task.TimeTaskConfig;
 import com.cn.mysix.retype.Msg;
 import com.cn.mysix.service.TestSix;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
+@Slf4j
 @Api("mysix测试模块")
 @RestController()
 @RequestMapping("/six")
 public class mysix {
 
-    private Logger logger = LoggerFactory.getLogger(getClass());
+
 
     @Autowired
     private TestSix testSix;
@@ -41,13 +41,11 @@ public class mysix {
     public String six() {
 
 
-        SysUser ss=new SysUser();
         Msg msg = new Msg("six", 200, "真的");
-        String re1 = JSONObject.toJSONString(ss.getName());
-        ss= JSONUtil.toBean(re1,SysUser.class);
+
         String re = JSONObject.toJSONString(msg);
 
-        logger.info("答案：" + re);
+        log.info("答案：" + re);
         return re;
     }
 

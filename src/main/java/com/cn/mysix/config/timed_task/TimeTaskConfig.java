@@ -16,9 +16,14 @@ import org.springframework.stereotype.Component;
 @Component
 @Getter
 @Setter
-public class  TimeTaskConfig {
+public class TimeTaskConfig {
+
+
+    public static String T1;
+
 
     @Value("${tt.t1}")
-    public static String t1;
-
+    public void setT1(String t1) {
+        T1 = t1;
+    }
 }
