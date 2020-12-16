@@ -12,7 +12,6 @@ package com.cn.mysix.index;
 import com.alibaba.fastjson.JSONObject;
 import com.cn.mysix.bean.SysUser;
 import com.cn.mysix.config.MessagerType;
-import com.cn.mysix.config.timed_task.TimeTaskConfig;
 import com.cn.mysix.retype.Msg;
 import com.cn.mysix.service.TestSix;
 import io.swagger.annotations.Api;
