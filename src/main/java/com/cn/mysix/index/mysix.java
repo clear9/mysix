@@ -9,6 +9,7 @@ package com.cn.mysix.index;
  */
 
 
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.cn.mysix.bean.SysUser;
 import com.cn.mysix.config.MessagerType;
@@ -40,8 +41,10 @@ public class mysix {
     public String six() {
 
 
+        SysUser ss=new SysUser();
         Msg msg = new Msg("six", 200, "真的");
-
+        String re1 = JSONObject.toJSONString(ss.getName());
+        ss= JSONUtil.toBean(re1,SysUser.class);
         String re = JSONObject.toJSONString(msg);
 
         logger.info("答案：" + re);
