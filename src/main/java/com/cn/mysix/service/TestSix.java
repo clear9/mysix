@@ -5,6 +5,7 @@ import com.cn.mysix.dao.TestSixDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ import java.util.List;
 @Service
 public class TestSix {
 
-    @Autowired
+    @Resource
     private TestSixDao testSixDao;
 
     public List<SysUser> selectall(Integer count) {

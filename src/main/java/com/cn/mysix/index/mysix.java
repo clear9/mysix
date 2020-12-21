@@ -9,6 +9,7 @@ package com.cn.mysix.index;
  */
 
 
+import cn.hutool.core.util.RuntimeUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.cn.mysix.bean.SysUser;
 import com.cn.mysix.config.MessagerType;
@@ -91,6 +92,16 @@ public class mysix {
         return JSONObject.toJSONString(new Msg(MessagerType.SIX_Delete, 200, (testSix.delete(countid) > 0) ? "成功" : "失败"));
 
     }
+
+
+    @ApiOperation(value = "远程桌面")
+    @GetMapping("/remote")
+    public String remote() {
+
+        RuntimeUtil.execForStr("mstsc");
+        return JSONObject.toJSONString(new Msg(MessagerType.SIX_INSERT, 200,"调动完成"));
+    }
+
 
 
 }
