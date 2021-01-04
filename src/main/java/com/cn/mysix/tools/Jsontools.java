@@ -1,36 +1,18 @@
 package com.cn.mysix.tools;
 
 import cn.hutool.core.collection.CollUtil;
-import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.lang.Console;
-import cn.hutool.core.net.NetUtil;
-import cn.hutool.core.swing.clipboard.ClipboardUtil;
-import cn.hutool.core.util.IdUtil;
-import cn.hutool.core.util.ObjectUtil;
-import cn.hutool.core.util.RandomUtil;
-import cn.hutool.core.util.RuntimeUtil;
-import cn.hutool.http.HttpRequest;
-import cn.hutool.poi.excel.ExcelReader;
 import cn.hutool.poi.excel.ExcelUtil;
 import cn.hutool.poi.excel.ExcelWriter;
-import cn.hutool.system.SystemUtil;
-import com.cn.mysix.bean.SysUser;
 import com.cn.mysix.retype.Msg;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.File;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 /**
- * @ClassName Jsontools
- * @Description Jsontools
- * @Author wub
- * @Date 2020/11/17 11:02
- * @Version 1.0
+ * @author wub
+ * @version 1.0
  */
 
 @Slf4j

@@ -19,5 +19,5 @@ public interface TestSixDao {
 
     int update(SysUser sysUser);
 
-    int delete(Integer countid);
+    int delete(Integer countId);
 }

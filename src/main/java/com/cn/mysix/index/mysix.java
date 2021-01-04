@@ -21,7 +21,6 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 
 @Slf4j
@@ -56,9 +55,9 @@ public class mysix {
 
     @ApiOperation(value = "用户表查询，可以输入User，不输则查全部")
     @GetMapping("/sel")
-    public List<SysUser> sel(@RequestParam(required = false) Integer countid) {     //注解非必传参数  required = false
+    public String  sel(@RequestParam(required = false) Integer countid) {     //注解非必传参数  required = false
 
-        return testSix.selectall(countid);
+        return JSONObject.toJSONString(new Msg(MessagerType.SIX_SELECT,200,testSix.selectAll(countid)));
 
     }
 

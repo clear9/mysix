@@ -7,11 +7,8 @@ import lombok.*;
 import java.io.Serializable;
 
 /**
- * @ClassName SysUser
- * @Description SysUser
- * @Author wub
- * @Date 2020/3/9 17:41
- * @Version 1.0
+ * @author wub
+ * @version 1.0
  */
 
 

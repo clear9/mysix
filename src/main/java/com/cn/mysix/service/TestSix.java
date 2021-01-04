@@ -2,18 +2,14 @@ package com.cn.mysix.service;
 
 import com.cn.mysix.bean.SysUser;
 import com.cn.mysix.dao.TestSixDao;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * @ClassName TestSix
- * @Description TestSix
- * @Author wub
- * @Date 2020/3/9 18:04
- * @Version 1.0
+ * @author wub
+ * @version 1.0
  */
 
 @Service
@@ -22,7 +18,7 @@ public class TestSix {
     @Resource
     private TestSixDao testSixDao;
 
-    public List<SysUser> selectall(Integer count) {
+    public List<SysUser> selectAll(Integer count) {
 
         return testSixDao.selectAll(count);
 
@@ -43,9 +39,9 @@ public class TestSix {
         return 0;
     }
 
-    public int delete(Integer countid) {
-        if (countid != null) {
-            return testSixDao.delete(countid);
+    public int delete(Integer countId) {
+        if (countId != null) {
+            return testSixDao.delete(countId);
         }
         return 0;
     }

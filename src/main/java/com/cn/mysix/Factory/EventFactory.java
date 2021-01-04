@@ -10,6 +10,7 @@ import java.util.List;
  *
  * @author wub
  */
+
 @Component
 public class EventFactory {
 

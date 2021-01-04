@@ -56,7 +56,7 @@
 
     <delete id="delete" parameterType="com.cn.mysix.bean.SysUser">
 
-        delete from test.sysuser where count = #{countid,jdbcType=INTEGER}
+        delete from test.sysuser where count = #{countId,jdbcType=INTEGER}
     </delete>
 
 
