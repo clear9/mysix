@@ -14,11 +14,11 @@ import com.alibaba.fastjson.JSONObject;
 import com.cn.mysix.bean.SysUser;
 import com.cn.mysix.config.MessagerType;
 import com.cn.mysix.retype.Msg;
+import com.cn.mysix.service.EventAsyncService;
 import com.cn.mysix.service.TestSix;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,9 +31,14 @@ import java.util.List;
 public class mysix {
 
 
+    private final TestSix testSix;
 
-    @Autowired
-    private TestSix testSix;
+    private final EventAsyncService eventAsyncService;
+
+    public mysix(EventAsyncService eventAsyncService, TestSix testSix) {
+        this.eventAsyncService = eventAsyncService;
+        this.testSix = testSix;
+    }
 
 
     @ApiOperation(value = "第一个测试")
@@ -99,9 +104,15 @@ public class mysix {
     public String remote() {
 
         RuntimeUtil.execForStr("mstsc");
-        return JSONObject.toJSONString(new Msg(MessagerType.SIX_INSERT, 200,"调动完成"));
+        return JSONObject.toJSONString(new Msg(MessagerType.SIX_INSERT, 200, "调动完成"));
     }
 
+    @ApiOperation(value = "接收消息")
+    @GetMapping("/receiver")
+    public String receiver(@RequestParam Integer id) {
+        eventAsyncService.dispose(new Msg(),id);
 
+        return "200";
+    }
 
 }
