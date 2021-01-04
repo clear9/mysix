@@ -1,5 +1,6 @@
 package com.cn.mysix.service;
 
+import cn.hutool.core.util.ObjectUtil;
 import com.cn.mysix.Factory.EventFactory;
 import com.cn.mysix.retype.Msg;
 import lombok.extern.slf4j.Slf4j;
@@ -7,6 +8,8 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
+ * 异步处理接收到的消息
+ *
  * created on 2021-01-04 15:05
  *
  * @author wub
@@ -25,7 +28,8 @@ public class EventAsyncService {
     public void dispose(Msg msg,Integer id){
 
         EventSender eventSender=eventFactory.getEvent(id);
-        if(eventSender==null){
+        if(ObjectUtil.isNull(eventSender)){
+
             log.info("没有此类型的消息");
         }else{
             eventSender.send(msg);
