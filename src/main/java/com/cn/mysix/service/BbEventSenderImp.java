@@ -16,11 +16,11 @@ public class BbEventSenderImp implements EventSender{
     @Override
     public void send(Msg msg) {
 
-        log.info("222");
+        log.info("第三方消息[{}]",msg);
     }
 
     @Override
-    public Integer getType() {
-        return 2;
+    public String getType() {
+        return "2";
     }
 }

@@ -17,11 +17,11 @@ public class PpEventSenderImp implements EventSender {
     @Override
     public void send(Msg msg) {
 
-        log.info("123");
+        log.info("第三方消息[{}]",msg);
     }
 
     @Override
-    public Integer getType() {
-        return 1;
+    public String getType() {
+        return "1";
     }
 }

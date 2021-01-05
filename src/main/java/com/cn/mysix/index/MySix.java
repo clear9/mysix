@@ -10,6 +10,7 @@ package com.cn.mysix.index;
 
 
 import cn.hutool.core.util.RuntimeUtil;
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.cn.mysix.bean.SysUser;
 import com.cn.mysix.config.MessagerType;
@@ -27,14 +28,14 @@ import org.springframework.web.bind.annotation.*;
 @Api("mysix测试模块")
 @RestController()
 @RequestMapping("/six")
-public class mysix {
+public class MySix {
 
 
     private final TestSix testSix;
 
     private final EventAsyncService eventAsyncService;
 
-    public mysix(EventAsyncService eventAsyncService, TestSix testSix) {
+    public MySix(EventAsyncService eventAsyncService, TestSix testSix) {
         this.eventAsyncService = eventAsyncService;
         this.testSix = testSix;
     }
@@ -108,8 +109,12 @@ public class mysix {
 
     @ApiOperation(value = "接收消息")
     @GetMapping("/receiver")
-    public String receiver(@RequestParam Integer id) {
-        eventAsyncService.dispose(new Msg(),id);
+    public String receiver(@RequestParam String id) {
+
+        Msg msg=new Msg();
+        msg.setMsgType(id);
+
+        eventAsyncService.dispose(JSONUtil.toJsonStr(msg));
 
         return "200";
     }

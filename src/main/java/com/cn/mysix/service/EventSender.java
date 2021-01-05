@@ -14,6 +14,6 @@ public interface EventSender {
 
     void send(Msg msg);
 
-    Integer getType();
+    String getType();
 
 }

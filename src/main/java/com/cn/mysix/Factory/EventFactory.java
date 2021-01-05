@@ -21,7 +21,7 @@ public class EventFactory {
     }
 
 
-    public EventSender getEvent(Integer eventType) {
+    public EventSender getEvent(String eventType) {
 
         for (EventSender eventSender : eventSenderList) {
             if (eventSender.getType().equals(eventType)) {

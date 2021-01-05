@@ -1,34 +1,28 @@
 package com.cn.mysix.retype;
 
-/**
- * @ClassName Msg
- * @Description Msg
- * @Author wub
- * @Date 2020/3/9 12:13
- * @Version 1.0
- */
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 public class Msg {
 
-    String msgtype;
+    String msgType;
 
-    int msgcode;
+    int msgCode;
 
-    Object msgcontent;
+    Object msgContent;
 
 
-    public Msg(String msgtype, int msgcode, Object msgcontent) {
-        this.msgtype = msgtype;
-        this.msgcode = msgcode;
-        this.msgcontent = msgcontent;
+    public Msg(String msgType, int msgCode, Object msgContent) {
+        this.msgType = msgType;
+        this.msgCode = msgCode;
+        this.msgContent = msgContent;
     }
 
     public Msg() {
     }
+
 
 }

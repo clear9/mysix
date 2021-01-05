@@ -1,6 +1,7 @@
 package com.cn.mysix.service;
 
 import cn.hutool.core.util.ObjectUtil;
+import cn.hutool.json.JSONUtil;
 import com.cn.mysix.Factory.EventFactory;
 import com.cn.mysix.retype.Msg;
 import lombok.extern.slf4j.Slf4j;
@@ -25,12 +26,14 @@ public class EventAsyncService {
         this.eventFactory = eventFactory;
     }
 
-    public void dispose(Msg msg,Integer id){
+    public void dispose(String eventInfos){
 
-        EventSender eventSender=eventFactory.getEvent(id);
+        Msg msg= JSONUtil.toBean(eventInfos,Msg.class);
+
+        EventSender eventSender=eventFactory.getEvent(msg.getMsgType());
         if(ObjectUtil.isNull(eventSender)){
 
-            log.info("没有此类型的消息");
+            log.info("没有此类型的消息：[MsgType={}]",msg.getMsgType());
         }else{
             eventSender.send(msg);
         }
