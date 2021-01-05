@@ -1,5 +1,6 @@
 package com.cn.mysix.index;
 
+import cn.hutool.json.JSONUtil;
 import com.cn.mysix.retype.Msg;
 import com.cn.mysix.service.EventAsyncService;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,10 +21,10 @@ public class EventApiImpl implements EventApi {
 
 
     @Override
-    public Msg eventReceiver(String eventInfos) {
+    public String eventReceiver(String eventInfos) {
 
 
         eventAsyncService.dispose(eventInfos);
-        return new Msg("",200,null);
+        return JSONUtil.toJsonStr(new Msg("",200,null));
     }
 }

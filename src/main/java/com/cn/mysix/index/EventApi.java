@@ -20,7 +20,7 @@ public interface EventApi {
 
     @ApiOperation("接收事件")
     @PostMapping({"/api/v1/event/receiver"})
-    Msg eventReceiver(@ApiParam(name = "eventInfos",value = "事件内容") @RequestBody String eventInfos);
+    String eventReceiver(@ApiParam(name = "eventInfos",value = "事件内容") @RequestBody String eventInfos);
 
 
 }
