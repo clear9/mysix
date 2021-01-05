@@ -1,21 +1,14 @@
 package com.cn.mysix.tools;
 
-import com.alibaba.fastjson.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * @ClassName NetServer
- * @Description NetServer
- * @Author wub
- * @Date 2020/10/23 17:07
- * @Version 1.0
+ * @author wub
+ * @version 1.0
  */
-
 
 public class NetServer {
 

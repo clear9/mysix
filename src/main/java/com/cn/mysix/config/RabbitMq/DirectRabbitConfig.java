@@ -9,11 +9,9 @@
 //import org.springframework.amqp.core.Queue;
 //
 ///**
-// * @ClassName DirectRabbitConfig
-// * @Description DirectRabbitConfig
-// * @Author wub
-// * @Date 2020/3/13 13:49
-// * @Version 1.0
+// * created on 2019-10-24 15:07
+// *
+// * @author: wub
 // */
 //
 //@Configuration
@@ -21,16 +19,16 @@
 //
 //    @Bean
 //    public Queue TestDirectQueue(){
-//        return new Queue("TestDirectQueue1",true);
+//        return new Queue("TestQueue1",true);
 //    }
 //
 //    DirectExchange TestDirectExchange(){
-//        return new DirectExchange("TestDirectExchange");
+//        return new DirectExchange("TestExchange");
 //    }
 //
 //    @Bean
 //    Binding bindingDirect(){
-//        return BindingBuilder.bind(TestDirectQueue()).to(TestDirectExchange()).with("TestDirectRouting");
+//        return BindingBuilder.bind(TestDirectQueue()).to(TestDirectExchange()).with("TestRouting");
 //    }
 //
 //}

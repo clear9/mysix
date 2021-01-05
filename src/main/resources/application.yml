@@ -9,7 +9,7 @@ mybatis:
 #    port: 5672
 #    username: root
 #    password: root
-#    #虚拟host 可以不设置,使用server默认host
+    #虚拟host 可以不设置,使用server默认host
 #    virtual-host: JCcccHost
 
 

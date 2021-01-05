@@ -7,11 +7,9 @@ package com.cn.mysix.config.Kafka;
 import org.springframework.stereotype.Service;
 
 /**
- * @ClassName MessageProducer
- * @Description MessageProducer
- * @Author wub
- * @Date 2020/3/9 14:09
- * @Version 1.0
+ * @author wub
+ * @version 1.0
+ *
  * 消息生产者：用于发送消息
  */
 

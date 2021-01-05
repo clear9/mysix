@@ -1,11 +1,8 @@
 package com.cn.mysix.config;
 
 /**
- * @ClassName MessagerType
- * @Description MessagerType
- * @Author wub
- * @Date 2020/3/10 11:45
- * @Version 1.0
+ * @author wub
+ * @version 1.0
  */
 
 

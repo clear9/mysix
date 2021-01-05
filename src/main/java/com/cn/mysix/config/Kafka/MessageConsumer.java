@@ -6,12 +6,8 @@ package com.cn.mysix.config.Kafka;
 import org.springframework.stereotype.Service;
 
 /**
- * @ClassName MessageConsumer
- * @Description MessageConsumer
- * @Author wub
- * @Date 2020/3/9 14:08
- * @Version 1.0
- *
+ * @author wub
+ * @version 1.0
  */
 
 @Service
