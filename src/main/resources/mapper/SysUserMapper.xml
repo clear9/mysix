@@ -3,8 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.cn.mysix.dao.TestSixDao">
-    <resultMap type="com.cn.mysix.bean.SysUser" id="SysUser">
+<mapper namespace="com.cn.mi.dao.TestSixDao">
+    <resultMap type="com.cn.mi.bean.SysUser" id="SysUser">
         <id column="count" property="count" jdbcType="INTEGER"/>
         <result column="user" property="user" jdbcType="VARCHAR"/>
         <result column="password" property="password" jdbcType="VARCHAR"/>
@@ -17,20 +17,20 @@
         select * from test.sysuser
          
         <where>
-            <if test="countid != null and countid != ''">
-                and count = #{countid,jdbcType=INTEGER}
+            <if test="countId != null and countId != ''">
+                and count = #{countId,jdbcType=INTEGER}
             </if>
         </where>
 
     </select>
 
-    <insert id="insert" parameterType="com.cn.mysix.bean.SysUser">
+    <insert id="insert" parameterType="com.cn.mi.bean.SysUser">
 
         insert into test.sysuser (user,password,name,fno,userdd) values(#{user,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},
         #{name,jdbcType=VARCHAR},#{fno,jdbcType=INTEGER},#{userdd,jdbcType=VARCHAR})
     </insert>
 
-    <update id="update" parameterType="com.cn.mysix.bean.SysUser">
+    <update id="update" parameterType="com.cn.mi.bean.SysUser">
 
         update test.sysuser
         <set>
@@ -54,7 +54,7 @@
 
     </update>
 
-    <delete id="delete" parameterType="com.cn.mysix.bean.SysUser">
+    <delete id="delete" parameterType="com.cn.mi.bean.SysUser">
 
         delete from test.sysuser where count = #{countId,jdbcType=INTEGER}
     </delete>
