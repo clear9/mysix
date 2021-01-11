@@ -34,7 +34,7 @@ public class SwaggerConfig {
     private ApiInfo apiInfo(){
 
         return new ApiInfoBuilder()
-                .title("mi")
+                .title("mySix")
                 .description("学习永无止境!")
                 .contact(new Contact("knight","",""))
                 .version("1.0")

@@ -1,4 +1,4 @@
-package com.cn.mi.ttes.udp;
+package com.cn.mi.ttps.udp;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;

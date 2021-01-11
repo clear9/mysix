@@ -1,7 +1,6 @@
 package com.cn.mi.config.timed_task;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
@@ -9,7 +8,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @version 1.0
  */
 
-@PropertySource("classpath:application-tt.properties")
 @Configuration
 @EnableScheduling
 public class TimeTask {

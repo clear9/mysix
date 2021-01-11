@@ -1,20 +1,20 @@
-package com.cn.mi.service;
+package com.cn.mi.service.bbevent;
 
 import com.cn.mi.config.MessageType;
-import com.cn.mi.retype.Msg;
+import com.cn.mi.entity.result.Msg;
+import com.cn.mi.service.EventSender;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
- * 消息类型为"1"时的处理
+ * created on 2021-01-04 15:28
  *
- * created on 2021-01-04 14:48
  * @author wub
  */
+
 @Slf4j
 @Service
-public class PpEventSenderImp implements EventSender {
-
+public class BbEventSenderImp implements EventSender {
     @Override
     public void send(Msg msg) {
 
@@ -23,6 +23,6 @@ public class PpEventSenderImp implements EventSender {
 
     @Override
     public String getType() {
-        return MessageType.ONE_MESSAGE;
+        return MessageType.TWO_MESSAGE;
     }
 }

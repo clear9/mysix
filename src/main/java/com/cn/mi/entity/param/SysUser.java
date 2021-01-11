@@ -1,4 +1,4 @@
-package com.cn.mi.bean;
+package com.cn.mi.entity.param;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

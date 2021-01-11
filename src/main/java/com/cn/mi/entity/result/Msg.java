@@ -1,4 +1,4 @@
-package com.cn.mi.retype;
+package com.cn.mi.entity.result;
 
 
 import lombok.Data;

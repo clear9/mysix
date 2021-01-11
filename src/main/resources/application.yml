@@ -1,40 +1,14 @@
-mybatis:
-  mapper-locations: classpath:mapper/*.xml  #对应mapper映射xml文件所在路径
-  type-aliases-package: com.cn.mysix.bean  #对应实体类路径
+spring:
+  application:
+    name: MySix
+server:
+  port: 8888
 
 
+#logging:
+#  file:
+#    path: E:/log
+#  config: classpath:logback-spring.xml
 
-#  rabbitmq:
-#    host: 127.0.0.1
-#    port: 5672
-#    username: root
-#    password: root
-    #虚拟host 可以不设置,使用server默认host
-#    virtual-host: JCcccHost
-
-
-#spring:
-#  boot:
-#    admin:
-#      client:
-#        url: 'http://localhost:8888'
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#  endpoint:
-#    health:
-#      show-details: always
-
-device:
-  event:
-    server: ${DEVICE_EVENT_RECEIVER_HOST:localhost:7010}
-    receiver:
-      camera-face: ${CAMERA_FACE_EVENT_RECEIVER_ADDRESS:/api/v1/event/vehicle/receiver}
-#spring:
-#  flyway:
-#    baseline-on-migrate: true
-#    enabled: true
-#    baseline-version: 1
-#    validate-on-migrate: true
+timeTask:
+  t1: 1000

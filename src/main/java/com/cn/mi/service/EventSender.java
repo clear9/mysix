@@ -1,6 +1,6 @@
 package com.cn.mi.service;
 
-import com.cn.mi.retype.Msg;
+import com.cn.mi.entity.result.Msg;
 
 /**
  * 消息处置接口类

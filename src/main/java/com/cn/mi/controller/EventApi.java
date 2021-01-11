@@ -1,4 +1,4 @@
-package com.cn.mi.index;
+package com.cn.mi.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
