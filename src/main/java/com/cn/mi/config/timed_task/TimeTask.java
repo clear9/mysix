@@ -1,36 +1,32 @@
 package com.cn.mi.config.timed_task;
 
-import org.springframework.context.annotation.Configuration;
+import com.cn.mi.tools.NetServer;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 /**
  * @author wub
  * @version 1.0
  */
 
-@Configuration
+@Slf4j
+@Component
 @EnableScheduling
 public class TimeTask {
 
-//    private Logger logger = LoggerFactory.getLogger(getClass());
 
-//    private int asd=1;
 
-//    @Scheduled(cron = "${tt.t1}")
-//    public void timeT(){
-//
-//        logger.info("每个十分整点任务");
-//    }
+    @Scheduled(cron = "${timeTask.t1}")
+    public void timeT() {
 
-//    @Scheduled(fixedRate=10000)
-//    public void timeTT(){
-//        logger.info("192.168.2."+asd+(NetServer.ping("192.168.2."+asd)==true?":ok":":no"));
-//        if(asd<255){
-//            asd++;
-//        }else{
-//            asd=0;
-//        }
-//
-//    }
+        if (!NetServer.ping("192.168.1.200")){
+            log.info("连接失败");
+        }
+        log.info("连接正常");
+
+    }
+
 
 }

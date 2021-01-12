@@ -11,4 +11,4 @@ server:
 #  config: classpath:logback-spring.xml
 
 timeTask:
-  t1: 1000
+  t1: 0 0/20 * * * ?
