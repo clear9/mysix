@@ -21,10 +21,9 @@ public class TimeTask {
     @Scheduled(cron = "${timeTask.t1}")
     public void timeT() {
 
-        if (!NetServer.ping("192.168.1.200")){
-            log.info("连接失败");
+        if (NetServer.ping("172.16.11.245")){
+            log.info("连接正常");
         }
-        log.info("连接正常");
 
     }
 

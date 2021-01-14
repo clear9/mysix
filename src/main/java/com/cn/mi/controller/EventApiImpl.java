@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * created on 2021-01-05 11:18
  *
+ * 接收第三方消息实现类
  * @author wub
  */
 @RestController

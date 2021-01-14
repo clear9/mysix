@@ -18,7 +18,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>13</java.version>
+        <java.version>8</java.version>
     </properties>
 
     <dependencies>
@@ -42,6 +42,13 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.44</version>
+        </dependency>
+
+        <!-- ssh-->
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.54</version>
         </dependency>
 
         <!-- SwaggerUI相关依赖 -->

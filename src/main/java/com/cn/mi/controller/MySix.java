@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @Api("MySix测试模块")
 @RestController()
-@RequestMapping("/six")
+@RequestMapping("/api/v1/test")
 public class MySix {
 
 
@@ -40,7 +40,7 @@ public class MySix {
         String re = "127.0.0.1";
 
         if (NetServer.ping(re)) {
-            Msg msg = new Msg("six", 200, "真的");
+            Msg msg = new Msg("DiEr", 200, "真的");
             re = JSONObject.toJSONString(msg);
         }
         log.info("答案：" + re);
@@ -48,12 +48,12 @@ public class MySix {
     }
 
 
-    @ApiOperation(value = "远程桌面")
-    @GetMapping("/remote")
-    public String remote() {
-
-        RuntimeUtil.execForStr("mstsc");
-        return JSONObject.toJSONString(new Msg(MessageType.SIX_INSERT, 200, "调动完成"));
+    @ApiOperation(value = "本地执行命令")
+    @GetMapping("/localCommand")
+    public String execCommand(@RequestParam String cmd) {
+        String result=RuntimeUtil.execForStr(cmd);
+        log.info("执行结果："+result);
+        return JSONObject.toJSONString(new Msg(MessageType.SIX_INSERT, 200, result));
     }
 
     @ApiOperation(value = "接收消息")
