@@ -20,6 +20,8 @@ public class MessageType {
     public static final String SIX_Update = "Six_Update";
 
     public static final String SIX_Delete = "Six_Delete";
+
+    public static final String RETURN_CODE = "返回值";
     /**
      * 第三方消息类型
      */

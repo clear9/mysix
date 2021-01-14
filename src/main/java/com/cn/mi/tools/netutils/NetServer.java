@@ -1,4 +1,4 @@
-package com.cn.mi.tools;
+package com.cn.mi.tools.netutils;
 
 
 import lombok.extern.slf4j.Slf4j;

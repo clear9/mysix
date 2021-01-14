@@ -1,6 +1,6 @@
 package com.cn.mi.config.timed_task;
 
-import com.cn.mi.tools.NetServer;
+import com.cn.mi.tools.netutils.NetServer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;

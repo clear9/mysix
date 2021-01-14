@@ -6,7 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.cn.mi.config.MessageType;
 import com.cn.mi.entity.result.Msg;
 import com.cn.mi.Async.EventAsyncService;
-import com.cn.mi.tools.NetServer;
+import com.cn.mi.tools.netutils.NetServer;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -53,7 +53,7 @@ public class MySix {
     public String execCommand(@RequestParam String cmd) {
         String result=RuntimeUtil.execForStr(cmd);
         log.info("执行结果："+result);
-        return JSONObject.toJSONString(new Msg(MessageType.SIX_INSERT, 200, result));
+        return JSONObject.toJSONString(new Msg(MessageType.RETURN_CODE, 200, result));
     }
 
     @ApiOperation(value = "接收消息")
