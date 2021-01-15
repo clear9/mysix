@@ -2,7 +2,7 @@ spring:
   application:
     name: MySix
   profiles:
-    active: ${ENV:web}
+    active: ${ENV:}
 server:
   port: 8888
 

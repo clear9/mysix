@@ -12,6 +12,9 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * created on 2021-01-11 13:50
  *
@@ -50,10 +53,15 @@ public class MySix {
 
     @ApiOperation(value = "本地执行命令")
     @GetMapping("/localCommand")
-    public String execCommand(@RequestParam String cmd) {
-        String result=RuntimeUtil.execForStr(cmd);
+    public Msg execCommand(@RequestParam String cmd) {
+        List<String> result=new ArrayList<>();
+        try {
+            result=RuntimeUtil.execForLines(cmd);
+        }catch (Exception e){
+            result.add("命令出错");
+        }
         log.info("执行结果："+result);
-        return JSONObject.toJSONString(new Msg(MessageType.RETURN_CODE, 200, result));
+        return new Msg(MessageType.RETURN_CODE, 200, result);
     }
 
     @ApiOperation(value = "接收消息")
