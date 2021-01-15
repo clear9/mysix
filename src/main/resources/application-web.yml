@@ -1,0 +1,5 @@
+server:
+  port: 8889
+
+timeTask:
+  task: 0 0/30 * * * ?
