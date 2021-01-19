@@ -1,6 +1,7 @@
 package com.cn.mi.controller;
 
 import cn.hutool.core.util.RuntimeUtil;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.cn.mi.config.MessageType;
@@ -46,6 +47,8 @@ public class MySix {
             Msg msg = new Msg("DiEr", 200, "真的");
             re = JSONObject.toJSONString(msg);
         }
+
+        String s=StrUtil.trim("12 1");
         log.info("答案：" + re);
         return re;
     }
