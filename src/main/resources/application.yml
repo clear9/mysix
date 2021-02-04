@@ -14,3 +14,9 @@ server:
 
 timeTask:
   t1: 0 0/20 * * * ?
+
+jie:
+  ip: ${JIELINK-IP:121.34.253.100}
+  port: ${JIELINK-PORT:40162}
+  userName: ${JIELINK-USERNAME:9999}
+  passWord: ${JIELINK-PASSWORD:123456}
