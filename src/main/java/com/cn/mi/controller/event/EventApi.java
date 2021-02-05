@@ -1,4 +1,4 @@
-package com.cn.mi.controller;
+package com.cn.mi.controller.event;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

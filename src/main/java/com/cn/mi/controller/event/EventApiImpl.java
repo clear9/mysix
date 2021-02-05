@@ -1,4 +1,4 @@
-package com.cn.mi.controller;
+package com.cn.mi.controller.event;
 
 import cn.hutool.json.JSONUtil;
 import com.cn.mi.entity.result.Msg;

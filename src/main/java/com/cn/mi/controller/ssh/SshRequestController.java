@@ -1,4 +1,4 @@
-package com.cn.mi.controller;
+package com.cn.mi.controller.ssh;
 
 import com.cn.mi.config.MessageType;
 import com.cn.mi.entity.param.SshConnect;

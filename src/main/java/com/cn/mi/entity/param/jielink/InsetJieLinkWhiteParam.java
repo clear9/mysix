@@ -1,5 +1,6 @@
 package com.cn.mi.entity.param.jielink;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,8 +14,9 @@ import java.io.Serializable;
  * @author wub
  */
 @Data
-@NoArgsConstructor
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class InsetJieLinkWhiteParam implements Serializable {
 
     private static final long serialVersionUID = -653260711402179587L;
