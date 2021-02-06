@@ -60,7 +60,7 @@ public class SshRequestController {
     public Msg deploy() {
 
         SshConnect sshConnect = new SshConnect();
-        sshConnect.setSshHost("172.16.11.107");
+        sshConnect.setSshHost("192.168.1.149");
         sshConnect.setSshPort(22);
         sshConnect.setSshUser("root");
         sshConnect.setSshPass("123.com");
